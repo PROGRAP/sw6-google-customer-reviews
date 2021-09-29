@@ -1,0 +1,16 @@
+{
+  "linters": {
+    "eslint": {
+      "type": "script-and-regex",
+      "script-and-regex.script": "sh -c 'npx eslint $0 2>&1 || true'",
+      "script-and-regex.regex": "/^\\s*(?P<line>[0-9]+):(?P<char>[0-9]+)\\s+(?P<severity>(?:error|warning|advice))\\s+(?P<message>.*)\\s{2,}(?P<name>[a-z\\-]+)\\s*$/m",
+      "include": "(src/.*\\.js$)"
+    },
+    "stylelint": {
+      "type": "script-and-regex",
+      "script-and-regex.script": "sh -c 'npx stylelint -f unix $0 2>&1 || true'",
+      "script-and-regex.regex": "/^(?P<file>[^:\\n\\r]+):(?P<line>[0-9]+):(?P<char>[0-9]+):\\s*(?P<message>.*)\\s*\\((?P<name>[^)]+)\\)\\s*\\[(?P<severity>[^]]+)\\]\\s*$/m",
+      "include": "(src/.*\\.scss$)"
+    }
+  }
+}

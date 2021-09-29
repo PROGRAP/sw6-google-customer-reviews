@@ -1,0 +1,21 @@
+{
+  "name": "zmb-google-customer-reviews",
+  "version": "1.0.0",
+  "description": "Shopware 6 app that displays a google customer reviews badge",
+  "main": "index.js",
+  "scripts": {
+    "preview": "./git-preview.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prograp/sw6-google-customer-reviews.git"
+  },
+  "author": "PROGRAP <mail@prograp.com>",
+  "license": "proprietary",
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-concentric-order": "^4.0.0",
+    "stylelint-config-sass-guidelines": "^7.1.0"
+  }
+}

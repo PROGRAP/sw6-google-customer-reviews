@@ -1,0 +1,99 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "globals": {
+        "Shopware": "readonly"
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "getter-return": [
+            "error"
+        ],
+        "no-console": 0,
+        "prefer-arrow-callback": [
+            "error"
+        ],
+        "prefer-const": [
+            "error"
+        ],
+        "no-var": [
+            "error"
+        ],
+        "prefer-template": [
+            "error"
+        ],
+        "no-multiple-empty-lines": [
+            "error"
+        ],
+        "padding-line-between-statements": [
+            "error",
+            { "blankLine": "always", "prev": "let", "next": "*" },
+            { "blankLine": "always", "prev": "const", "next": "*" },
+            { "blankLine": "any", "prev": "const", "next": "const" },
+            { "blankLine": "any", "prev": "const", "next": "let" },
+            { "blankLine": "any", "prev": "let", "next": "let" },
+            { "blankLine": "any", "prev": "let", "next": "const" },
+            { "blankLine": "always", "prev": "if", "next": "*" },
+            { "blankLine": "always", "prev": "*", "next": "if" },
+            { "blankLine": "always", "prev": "while", "next": "*" },
+            { "blankLine": "always", "prev": "*", "next": "while" },
+            { "blankLine": "always", "prev": "for", "next": "*" },
+            { "blankLine": "always", "prev": "*", "next": "for" },
+            { "blankLine": "always", "prev": "export", "next": "*" },
+            { "blankLine": "always", "prev": "*", "next": "export" },
+            { "blankLine": "any", "prev": "export", "next": "export" },
+            { "blankLine": "always", "prev": "import", "next": "*" },
+            { "blankLine": "always", "prev": "*", "next": "import" },
+            { "blankLine": "any", "prev": "import", "next": "import" },
+            { "blankLine": "always", "prev": "*", "next": "continue" },
+            { "blankLine": "always", "prev": "*", "next": "break" },
+            { "blankLine": "always", "prev": "*", "next": "return" },
+            { "blankLine": "always", "prev": "function", "next": "*" },
+            { "blankLine": "always", "prev": "*", "next": "function" },
+            { "blankLine": "always", "prev": "try", "next": "*" },
+            { "blankLine": "always", "prev": "*", "next": "try" },
+            { "blankLine": "always", "prev": "*", "next": "multiline-block-like" },
+            { "blankLine": "always", "prev": "multiline-block-like", "next": "*" }
+        ],
+        "lines-around-comment": [
+            "error",
+            { "beforeBlockComment": true, "beforeLineComment": true }
+        ],
+        "spaced-comment": [
+            "error",
+            "always", {
+                "block": {
+                    "balanced": true
+                }
+            }
+        ],
+        "quote-props": [
+            "error",
+            "as-needed"
+        ],
+        "key-spacing": [
+            "error"
+        ]
+    }
+}
