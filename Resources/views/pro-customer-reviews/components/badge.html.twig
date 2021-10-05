@@ -1,0 +1,61 @@
+{% block pro_customer_reviews_badge %}{% apply spaceless %}
+    {% set theme = theme ?: config('ZmbGoogleCustomerReviews.config.theme') %}
+
+    <a data-pro-customer-reviews target="_blank" data-key="{{ config('ZmbGoogleCustomerReviews.config.apiKey') }}" data-id="{{ config('ZmbGoogleCustomerReviews.config.placeId') }}" data-load-lib="{{ config('ZmbGoogleCustomerReviews.config.loadLib') }}" class="theme-{{theme}}{% if class %} {{ class }}{% endif %}">
+        {% block pro_customer_reviews_badge_content %}
+            {% block pro_customer_reviews_badge_rating %}
+                <div class="rating">
+                    {% block pro_customer_reviews_badge_rating_content %}
+                        {% block pro_customer_reviews_badge_rating_current %}
+                            <div class="current"></div>
+                        {% endblock %}
+
+                        {% block pro_customer_reviews_badge_rating_stars %}
+                            <div class="stars">
+                                {% block pro_customer_reviews_badge_rating_stars_content %}
+                                    <div class="star-group">
+                                        {% block pro_customer_reviews_badge_rating_full_star %}
+                                            <svg class="full-star" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="#FBBC04" fill-rule="evenodd"/>
+                                            </svg>
+                                        {% endblock %}
+                                    </div>
+
+                                    <div class="star-group">
+                                        {% block pro_customer_reviews_badge_rating_half_star %}
+                                            <svg class="half-star" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24ZM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4Z" fill="#FBBC04" fill-rule="evenodd"/>
+                                            </svg>
+                                        {% endblock %}
+                                    </div>
+
+                                    <div class="star-group">
+                                        {% block pro_customer_reviews_badge_rating_empty_star %}
+                                            <svg class="empty-star" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24ZM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4Z" fill="#FBBC04" fill-rule="evenodd"/>
+                                            </svg>
+                                        {% endblock %}
+                                    </div>
+                                {% endblock %}
+                            </div>
+                        {% endblock %}
+                    {% endblock %}
+                </div>
+            {% endblock %}
+
+            {% block pro_customer_reviews_badge_label %}
+                <div class="label">
+                    {% block pro_customer_reviews_badge_label_content %}
+                        {% block pro_customer_reviews_badge_label_logo %}
+                            <img class="google-logo" width="10" src="data:image/webp;base64,UklGRkADAABXRUJQVlA4TDMDAAAvE8AEEO8FObJt1cpaz98PAWcooRMGI0IgAXfXe3YakGPbVhXtcy8uM9chCRABQRMKMTCCdu93DxxJtl01c+7DQ0jE/jN25J2Uei+9fw4c27aWJyfu7knl7nVSGRUDYA7UzEh77yihci3/LJy4+xcAEFkszjzdRFAANGJEa8gwSG8SUPI+v9DF+OEvkFJt9x+b5r8a8lWmzaxvC1zqS/lk5FtfuG+1+Xjvjrl4nVbuanX5XqX/Q5MCFaBCUIAFwjowBnVV5gpDiZ+AWnjjHwE2JiTXJRM9la0gPEeaQYZaGqxWYCKZKpsj/9HcaownKVRljf9crU2WqVK2plIA73al7Ouv0wMYMJiAIIACBL4PlWR2+sV67+E2FVObiZ3ddnFyjmzueAkGBwghBIMBWIUoA0gAjYgsKX4BAZEJbSglYlMGwChqBT5tGdCJZOOr0CiyujcvZr5h4qjW3InheEADoyU6it//z+uBj8g3Lci0b/r7otxeHq8uB9/iqP/VGOP/ZGkH0p6qm9qdt99ut/tpHqDUAylpqXRIB5JRYeVi/FZWMLKCXgWKrDrFVEqzsun6SIqK2VIYiIAILCFyQBEYdNhMNUwQEBBQAIVADPUv/vUviZd0y8/Y+noQ7Mua/q/PplH7v32XYvO3iPen4VY+Bv3xf+vu8HxzuP1ZtOUH55eL4vi6lZ0CgGjbtulm17ZSB7WN1Epq27Zt23Zj1Da+7qG/ENH/CQBpXnRogH9QZgzocr2decnJfKZHcCJFQpZjOovDZHKYKWnukSQ5XulMTnIG0yk1lZPiFkXil87kpLgEhnFDfHiucSDaOrA5fM9YAMgNjwBR1djGPsk3G/QZumrWdvH4p5GWjrmJFYD89sYG0qYeQ00dCwMAmGweLiYd7ibo0ymrqiruNNLSVjf7BDDVNlhbX1dTVlU8wdDT+H5/BYCfv9+f8dai0uo+VdOv++vjBZB3lVcMjYzh404skB49ECynB0qqCjsAlZ2rU4H85nBlaX1rfqayoKUXwPOm8kwguRRcyJQiwexoP4gv++dKieD0VCCQKm7nQLm8LZRJJFLJye4TaL49ru1tHKwughQA">
+                        {% endblock %}
+
+                        {% block pro_customer_reviews_badge_label_text %}
+                            <span class="text">{{ 'pro.customerReviews.label' | trans }}</span>
+                        {% endblock %}
+                    {% endblock %}
+                </div>
+            {% endblock %}
+        {% endblock %}
+    </a>
+{% endapply %}{% endblock %}

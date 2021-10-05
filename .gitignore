@@ -2,3 +2,5 @@
 node_modules/
 .idea/
 Resources/app/storefront/dist/
+
+/vendor/

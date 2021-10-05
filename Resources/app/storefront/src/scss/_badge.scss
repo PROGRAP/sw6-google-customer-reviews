@@ -1,0 +1,48 @@
+@import './base/badge';
+
+[data-pro-customer-reviews] {
+    @include pro-customer-reviews-badge();
+    @include pro-customer-reviews-badge-light();
+
+    .rating {
+        @include pro-customer-reviews-badge-rating();
+    }
+
+    .current {
+        @include pro-customer-reviews-badge-rating-value();
+    }
+
+    .stars {
+        @include pro-customer-reviews-badge-stars();
+    }
+
+    .star-group {
+        @include pro-customer-reviews-badge-star-group();
+    }
+
+    .star-logo {
+        @include pro-customer-reviews-badge-star-group();
+    }
+
+    .google-logo {
+        @include pro-customer-reviews-badge-logo();
+    }
+
+    .label {
+        @include pro-customer-reviews-badge-label();
+    }
+
+    &.theme-dark {
+        @include pro-customer-reviews-badge-dark();
+    }
+
+    &.theme-dynamic {
+        @media (prefers-color-scheme: dark) {
+            @include pro-customer-reviews-badge-dark();
+        }
+    }
+
+    &:hover {
+        @include pro-customer-reviews-badge-hover();
+    }
+}

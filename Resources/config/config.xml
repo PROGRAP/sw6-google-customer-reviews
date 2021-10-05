@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Settings</title>
+        <title lang="de-DE">Einstellungen</title>
+
+        <input-field>
+            <name>apiKey</name>
+            <label>Google Maps API-Key</label>
+            <label lang="de-DE">Google Maps API-Schlüssel</label>
+        </input-field>
+
+        <input-field>
+            <name>placeId</name>
+            <label>Google Maps Place ID</label>
+            <label lang="de-DE">Google Maps Place ID</label>
+            <helpText>Go To https://bit.ly/3o7D6ti to find your place id.</helpText>
+        </input-field>
+
+        <input-field type="single-select">
+            <name>position</name>
+            <label>"Badge Position"</label>
+            <label lang="de-DE">Badge Position</label>
+            <defaultValue>copyright-before</defaultValue>
+            <options>
+                <option>
+                    <id>footer-nav</id>
+                    <name>In Last Footer Navigation Column</name>
+                    <name lang="de-DE">In Lezter Footer Navigationsspalte</name>
+                </option>
+                <option>
+                    <id>new-column</id>
+                    <name>In New Footer Column</name>
+                    <name lang="de-DE">In Neuer Footer Spalte</name>
+                </option>
+                <option>
+                    <id>shipping-payment</id>
+                    <name>After Shipping Logos</name>
+                    <name lang="de-DE">Nach Versandlogos</name>
+                </option>
+                <option>
+                    <id>copyright-before</id>
+                    <name>Before Copyright</name>
+                    <name lang="de-DE">Vor Copyright</name>
+                </option>
+                <option>
+                    <id>copyright-after</id>
+                    <name>After Copyright</name>
+                    <name lang="de-DE">Nach Copyright</name>
+                </option>
+                <option>
+                    <id>manual</id>
+                    <name>Add Manually</name>
+                    <name lang="de-DE">Manuell Einfügen</name>
+                </option>
+            </options>
+        </input-field>
+        <input-field type="single-select">
+            <name>theme</name>
+            <label>Badge Theme</label>
+            <label lang="de-DE">Badge Theme</label>
+            <defaultValue>dynamic</defaultValue>
+            <options>
+                <option>
+                    <id>light</id>
+                    <name>Light</name>
+                    <name lang="de-DE">Hell</name>
+                </option>
+                <option>
+                    <id>dark</id>
+                    <name>Dark</name>
+                    <name lang="de-DE">Dunkel</name>
+                </option>
+                <option>
+                    <id>dynamic</id>
+                    <name>Dynamic</name>
+                    <name lang="de-DE">Dynamisch</name>
+                </option>
+            </options>
+        </input-field>
+        <input-field type="bool">
+            <name>loadLib</name>
+            <label>Load Google Maps Library</label>
+            <label lang="de-DE">Google Maps Bibliothek Laden</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+    </card>
+</config>

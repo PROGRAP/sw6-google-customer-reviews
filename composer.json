@@ -1,0 +1,15 @@
+{
+    "name": "prograp/zmb-google-customer-reviews",
+    "version": "0.1.0",
+    "description": "Shopware 6 app that displays a google customer reviews badge",
+    "type": "shopware-platform-app",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "PROGRAP",
+            "email": "mail@prograp.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

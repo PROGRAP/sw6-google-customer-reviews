@@ -1,0 +1,135 @@
+$pro-customer-reviews-badge-light-color: rgba(0, 0, 0, .6);
+$pro-customer-reviews-badge-dark-color: rgba(255, 255, 255, .6);
+
+@mixin pro-customer-reviews-badge(
+    $padding: 8px,
+    $border-radius: 4px,
+) {
+    display: inline-block;
+    position: relative;
+    flex: 0 0 auto;
+    border: 1px solid;
+    border-radius: $border-radius;
+    padding: $padding;
+    text-decoration: none;
+    font-family: 'Roboto';
+}
+
+@mixin pro-customer-reviews-badge-hover() {
+    text-decoration: none;
+}
+
+@mixin pro-customer-reviews-badge-light-base(
+    $background-color: #fff,
+    $color: $pro-customer-reviews-badge-light-color,
+) {
+    border-color: rgba(0, 0, 0, .12);
+    background-color: $background-color;
+    color: $color;
+}
+
+@mixin pro-customer-reviews-badge-light-hover($color: $pro-customer-reviews-badge-light-color) {
+    color: $color;
+}
+
+@mixin pro-customer-reviews-badge-light-label($color: $pro-customer-reviews-badge-light-color) {
+    color: $color;
+}
+
+@mixin pro-customer-reviews-badge-light($color: $pro-customer-reviews-badge-light-color) {
+    @include pro-customer-reviews-badge-light-base($color: $color);
+
+    .label {
+        @include pro-customer-reviews-badge-light-label($color: $color);
+    }
+
+    &:hover {
+        @include pro-customer-reviews-badge-light-hover($color: $color);
+
+        .label {
+            @include pro-customer-reviews-badge-light-hover($color: $color);
+        }
+    }
+}
+
+@mixin pro-customer-reviews-badge-dark-base(
+    $background-color: #000,
+    $color: $pro-customer-reviews-badge-dark-color
+) {
+    border-color: rgba(255, 255, 255, .12);
+    background-color: $background-color;
+    color: $color;
+}
+
+@mixin pro-customer-reviews-badge-dark-hover(
+    $color: $pro-customer-reviews-badge-dark-color
+) {
+    color: $color;
+}
+
+@mixin pro-customer-reviews-badge-dark-label(
+    $color: $pro-customer-reviews-badge-dark-color
+) {
+    color: $color;
+}
+
+@mixin pro-customer-reviews-badge-dark(
+    $color: $pro-customer-reviews-badge-dark-color
+) {
+    @include pro-customer-reviews-badge-dark-base($color: $color);
+
+    .label {
+        @include pro-customer-reviews-badge-dark-label();
+    }
+
+    &:hover {
+        @include pro-customer-reviews-badge-dark-hover($color: $color);
+
+        .label {
+            @include pro-customer-reviews-badge-dark-hover();
+        }
+    }
+}
+
+@mixin pro-customer-reviews-badge-label(
+    $line-height: 16px,
+) {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    text-transform: uppercase;
+    line-height: $line-height;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+}
+
+@mixin pro-customer-reviews-badge-logo(
+    $margin: 0 4px 0 0,
+) {
+    margin: $margin;
+}
+
+@mixin pro-customer-reviews-badge-rating-value(
+    $margin-right: 4px,
+) {
+    margin-right: $margin-right;
+}
+
+@mixin pro-customer-reviews-badge-stars() {
+    display: flex;
+}
+
+@mixin pro-customer-reviews-badge-star-group() {
+    display: inline-flex;
+}
+
+@mixin pro-customer-reviews-badge-rating(
+    $color: #fbbc04,
+    $line-height: 24px
+) {
+    display: flex;
+    align-items: center;
+    line-height: $line-height;
+    color: $color;
+    font-size: 20px;
+}
