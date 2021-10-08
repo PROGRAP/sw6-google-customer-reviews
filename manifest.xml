@@ -2,13 +2,14 @@
 <manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/Framework/App/Manifest/Schema/manifest-1.0.xsd">
     <meta>
         <name>ZmbGoogleCustomerReviews</name>
-        <label>Google Customer Reviews</label>
-        <label lang="de-DE">Google Kunden Bewertungen</label>
-        <description>Displays the google customer reviews badge</description>
-        <description lang="de-DE">Zeigt den Google Kunden Bewertungen badge an</description>
+        <label>Google My Business Review Badge</label>
+        <label lang="de-DE">Google My Business Review Badge</label>
+        <description>Displays the google my business customer reviews badge</description>
+        <description lang="de-DE">Zeigt den Google My Business Kunden Bewertungen Badge an</description>
         <author>PROGRAP</author>
         <copyright>(c) by Prograp GmbH</copyright>
         <version>1.0.0</version>
+        <icon>Resources/icon.png</icon>
         <license>Apache-2.0</license>
     </meta>
 </manifest>
