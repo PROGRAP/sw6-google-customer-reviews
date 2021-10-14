@@ -2,11 +2,12 @@
 
 {% set theme = config('ZmbGoogleCustomerReviews.config.theme') %}
 {% set position = config('ZmbGoogleCustomerReviews.config.position') %}
+{% set float = config('ZmbGoogleCustomerReviews.config.float') %}
 
 {% block layout_footer_navigation_columns %}
     {{parent()}}
 
-    {% if positon == "new-column" %}
+    {% if positon == "new-column" and float == "none" %}
         <div class="col-md-4 footer-column js-footer-column">
             <div class="footer-column-headline footer-headline">
                 &nbsp;
@@ -23,7 +24,7 @@
 {% block layout_footer_navigation_information_links %}
     {{parent()}}
 
-    {% if position == "footer-nav" and loop.last %}
+    {% if position == "footer-nav" and loop.last and float == "none" %}
         {% sw_include '@Storefront/pro-customer-reviews/components/badge.html.twig' %}
     {% endif %}
 {% endblock %}
@@ -31,13 +32,13 @@
 {% block layout_footer_shipping_logos %}
     {{parent()}}
 
-    {% if position == "shipping-payment" %}
+    {% if position == "shipping-payment" and float == "none" %}
         {% sw_include '@Storefront/pro-customer-reviews/components/badge.html.twig' with { class: "footer-logo" } %}
     {% endif %}
 {% endblock %}
 
 {% block layout_footer_copyright %}
-    {% if position == "copyright-before" %}
+    {% if position == "copyright-before" and float == "none" %}
         <div class="footer-copyright" style="margin-bottom: 16px">
             {% sw_include '@Storefront/pro-customer-reviews/components/badge.html.twig' %}
         </div>
@@ -45,7 +46,7 @@
 
     {{parent()}}
 
-    {% if positon == "copyright-after" %}
+    {% if position == "copyright-after" and float == "none" %}
         <div class="footer-copyright" style="margin-top: 16px">
             {% sw_include '@Storefront/pro-customer-reviews/components/badge.html.twig' %}
         </div>
