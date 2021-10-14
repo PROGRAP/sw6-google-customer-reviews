@@ -57,6 +57,7 @@
                 </option>
             </options>
         </input-field>
+
         <input-field type="single-select">
             <name>theme</name>
             <label>Badge Theme</label>
@@ -80,6 +81,7 @@
                 </option>
             </options>
         </input-field>
+
         <input-field type="single-select">
             <name>float</name>
             <label>Badge Float</label>
@@ -115,6 +117,7 @@
                 </option>
             </options>
         </input-field>
+
         <input-field type="int">
             <name>offsetX</name>
             <label>Offset X axis</label>
@@ -123,6 +126,7 @@
             <helpText lang="de-DE">Abstand auf der X Achse vom nähesten Rand. Nur auf Floating-Badges anwendbar!</helpText>
             <defaultValue>0</defaultValue>
         </input-field>
+
         <input-field type="int">
             <name>offsetY</name>
             <label>Offset Y axis</label>
@@ -131,6 +135,7 @@
             <helpText lang="de-DE">Abstand auf der Y Achse vom nähesten Rand. Nur auf Floating-Badges anwendbar!</helpText>
             <defaultValue>0</defaultValue>
         </input-field>
+
         <input-field type="bool">
             <name>loadLib</name>
             <label>Load Google Maps Library</label>

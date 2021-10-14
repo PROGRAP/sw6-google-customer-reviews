@@ -33,7 +33,7 @@
     }
 
     &.floating {
-        position: fixed;
+        @include pro-customer-reviews-badge-floating();
     }
 
     &.theme-dark {
