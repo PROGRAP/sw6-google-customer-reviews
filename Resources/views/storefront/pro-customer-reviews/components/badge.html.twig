@@ -1,7 +1,7 @@
 {% block pro_customer_reviews_badge %}{% apply spaceless %}
     {% set theme = theme ?: config('ZmbGoogleCustomerReviews.config.theme') %}
 
-    <a data-pro-customer-reviews target="_blank" rel="noopener" data-key="{{ config('ZmbGoogleCustomerReviews.config.apiKey') }}" data-id="{{ config('ZmbGoogleCustomerReviews.config.placeId') }}" data-load-lib="{{ config('ZmbGoogleCustomerReviews.config.loadLib') }}" class="theme-{{theme}}{% if class %} {{ class }}{% endif %}">
+    <a data-pro-customer-reviews target="_blank" rel="noopener" data-key="{{ config('ZmbGoogleCustomerReviews.config.apiKey') }}" data-id="{{ config('ZmbGoogleCustomerReviews.config.placeId') }}" data-load-lib="{{ config('ZmbGoogleCustomerReviews.config.loadLib') }}" class="theme-{{theme}}{% if class %} {{ class }}{% endif %}" style="{% if offset %} {{ offset }}{% endif %}">
         {% block pro_customer_reviews_badge_content %}
             {% block pro_customer_reviews_badge_rating %}
                 <div class="rating" role="meter" aria-label="{{ 'pro.customerReviews.meter-label' | trans }}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
