@@ -55,6 +55,26 @@
                     <name>Add Manually</name>
                     <name lang="de-DE">Manuell Einfügen</name>
                 </option>
+                <option>
+                    <id>top_left</id>
+                    <name>top left</name>
+                    <name lang="de-DE">oben links</name>
+                </option>
+                <option>
+                    <id>top_right</id>
+                    <name>top right</name>
+                    <name lang="de-DE">oben rechts</name>
+                </option>
+                <option>
+                    <id>bottom_left</id>
+                    <name>bottom left</name>
+                    <name lang="de-DE">unten links</name>
+                </option>
+                <option>
+                    <id>bottom_right</id>
+                    <name>bottom right</name>
+                    <name lang="de-DE">unten rechts</name>
+                </option>
             </options>
         </input-field>
 
@@ -82,44 +102,8 @@
             </options>
         </input-field>
 
-        <input-field type="single-select">
-            <name>float</name>
-            <label>Badge Float</label>
-            <label lang="de-DE">Badge Float</label>
-            <helpText>Select if the badge should be floating instead of being part of the footer</helpText>
-            <helpText lang="de-DE">Wählen Sie ob das Badge am Bildschirm klebt, anstelle Teil des Footers zu sein</helpText>
-            <defaultValue>none</defaultValue>
-            <options>
-                <option>
-                    <id>none</id>
-                    <name>none</name>
-                    <name lang="de-DE">keins</name>
-                </option>
-                <option>
-                    <id>top_left</id>
-                    <name>top left</name>
-                    <name lang="de-DE">oben links</name>
-                </option>
-                <option>
-                    <id>top_right</id>
-                    <name>top right</name>
-                    <name lang="de-DE">oben rechts</name>
-                </option>
-                <option>
-                    <id>bottom_left</id>
-                    <name>bottom left</name>
-                    <name lang="de-DE">unten links</name>
-                </option>
-                <option>
-                    <id>bottom_right</id>
-                    <name>bottom right</name>
-                    <name lang="de-DE">unten rechts</name>
-                </option>
-            </options>
-        </input-field>
-
         <input-field type="int">
-            <name>offsetX</name>
+            <name>floatingOffsetX</name>
             <label>Offset X axis</label>
             <label lang="de-DE">Abstand X Achse</label>
             <helpText>Offset on the X axis from the nearest edge. Only affects floating badges!</helpText>
@@ -128,7 +112,7 @@
         </input-field>
 
         <input-field type="int">
-            <name>offsetY</name>
+            <name>floatingOffsetY</name>
             <label>Offset Y axis</label>
             <label lang="de-DE">Abstand Y Achse</label>
             <helpText>Offset on the Y axis from the nearest edge. Only affects floating badges!</helpText>

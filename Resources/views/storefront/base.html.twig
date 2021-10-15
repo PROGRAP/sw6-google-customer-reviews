@@ -1,32 +1,12 @@
 {% sw_extends '@Storefront/storefront/base.html.twig' %}
 
-{% set float = config('ZmbGoogleCustomerReviews.config.float') %}
-{% set offsetY = config('ZmbGoogleCustomerReviews.config.offsetY') %}
-{% set offsetX = config('ZmbGoogleCustomerReviews.config.offsetX') %}
-
-{% macro offset(context) %}
-    {% if context.float == "top_left" %}
-        {% set axisY = "top" %}
-        {% set axisX = "left" %}
-    {% elseif context.float == "top_right" %}
-        {% set axisY = "top" %}
-        {% set axisX = "right" %}
-    {% elseif context.float == "bottom_left" %}
-        {% set axisY = "bottom" %}
-        {% set axisX = "left" %}
-    {% elseif context.float == "bottom_right" %}
-        {% set axisY = "bottom" %}
-        {% set axisX = "right" %}
-    {% endif %}
-    {{axisY}}:{{context.offsetY}}px;{{axisX}}:{{context.offsetX}}px;
-{% endmacro %}
-
+{% set position = config('ZmbGoogleCustomerReviews.config.position') %}
 
 {% block base_body_inner %}
     {{parent()}}
 
-    {% if float != 'none' %}
-        {% sw_include '@Storefront/pro-customer-reviews/components/badge.html.twig' with { class: "floating", offset: _self.offset(_context) } %}
+    {% if position == 'top_left' or position == 'top_right' or position == 'bottom_right' or position == 'bottom_left' %}
+        {% sw_include '@Storefront/pro-customer-reviews/components/badge.html.twig' with { class: "floating" } %}
     {% endif %}
 
 {% endblock %}
