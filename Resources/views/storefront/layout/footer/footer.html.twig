@@ -13,7 +13,7 @@
             </div>
             <div class="footer-column-content">
                 <div class="footer-column-content-inner">
-                    {% sw_include '@ZmbGoogleCustomerReviews/pro-customer-reviews/components/badge.html.twig' %}
+                    {% sw_include '@ZmbGoogleCustomerReviews/storefront/pro-customer-reviews/components/badge.html.twig' %}
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
     {{parent()}}
 
     {% if position == "footer-nav" and loop.last %}
-        {% sw_include '@ZmbGoogleCustomerReviews/pro-customer-reviews/components/badge.html.twig' %}
+        {% sw_include '@ZmbGoogleCustomerReviews/storefront/pro-customer-reviews/components/badge.html.twig' %}
     {% endif %}
 {% endblock %}
 
@@ -32,14 +32,14 @@
     {{parent()}}
 
     {% if position == "shipping-payment" %}
-        {% sw_include '@ZmbGoogleCustomerReviews/pro-customer-reviews/components/badge.html.twig' with { class: "footer-logo" } %}
+        {% sw_include '@ZmbGoogleCustomerReviews/storefront/pro-customer-reviews/components/badge.html.twig' with { class: "footer-logo" } %}
     {% endif %}
 {% endblock %}
 
 {% block layout_footer_copyright %}
     {% if position == "copyright-before" %}
         <div class="footer-copyright" style="margin-bottom: 16px">
-            {% sw_include '@ZmbGoogleCustomerReviews/pro-customer-reviews/components/badge.html.twig' %}
+            {% sw_include '@ZmbGoogleCustomerReviews/storefront/pro-customer-reviews/components/badge.html.twig' %}
         </div>
     {% endif %}
 
@@ -47,7 +47,7 @@
 
     {% if positon == "copyright-after" %}
         <div class="footer-copyright" style="margin-top: 16px">
-            {% sw_include '@ZmbGoogleCustomerReviews/pro-customer-reviews/components/badge.html.twig' %}
+            {% sw_include '@ZmbGoogleCustomerReviews/storefront/pro-customer-reviews/components/badge.html.twig' %}
         </div>
     {% endif %}
 {% endblock %}
