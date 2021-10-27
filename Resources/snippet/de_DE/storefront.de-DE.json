@@ -1,7 +1,8 @@
 {
     "pro": {
         "customerReviews": {
-            "label": "Customer Reviews"
+            "label": "Customer Reviews",
+            "meter-label": "Sterne"
         }
     }
 }

@@ -66,7 +66,13 @@ export class ProCustomerReviews extends Plugin {
             return () => {
                 const currentValue = value();
 
-                target[name] = currentValue;
+                if (name in target) {
+                    target[name] = currentValue;
+
+                    return;
+                }
+
+                target.setAttribute(name, currentValue);
             };
         }
 
@@ -105,6 +111,7 @@ export class ProCustomerReviews extends Plugin {
             this.createBinding('.rating .stars .empty-star', 'repeat', null, () => {
                 return 5 - (this.getFraction(this.currentRating) >= 0.3 ? Math.ceil(this.currentRating) : Math.floor(this.currentRating));
             }),
+            this.createBinding('.rating', 'attribute', 'aria-valuenow', () => this.currentRating.toFixed(1)),
             this.createBinding('self', 'attribute', 'href', () => this.placeUrl),
         ];
 
