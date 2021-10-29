@@ -1,3 +1,6 @@
+# 1.0.2
+- badge accessibility was incomplete and has been fixed #16 (#17)
+
 # 1.0.1
 - shopware loads app templates into the DB in production mode, but disregarded the badge.html.twig template
 
