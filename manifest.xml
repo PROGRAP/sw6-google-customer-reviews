@@ -8,7 +8,7 @@
         <description lang="de-DE">Zeigt den Google My Business Kunden Bewertungen Badge an</description>
         <author>PROGRAP</author>
         <copyright>(c) by Prograp GmbH</copyright>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
         <icon>Resources/icon.png</icon>
         <license>Apache-2.0</license>
     </meta>

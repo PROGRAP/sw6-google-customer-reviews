@@ -1,6 +1,6 @@
 {
   "name": "zmb-google-customer-reviews",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Shopware 6 app that displays a google customer reviews badge",
   "main": "index.js",
   "scripts": {
