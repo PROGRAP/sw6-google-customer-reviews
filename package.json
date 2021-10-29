@@ -13,9 +13,12 @@
   "author": "PROGRAP <mail@prograp.com>",
   "license": "proprietary",
   "devDependencies": {
-    "eslint": "^7.13.0",
-    "stylelint": "^13.7.2",
-    "stylelint-config-concentric-order": "^4.0.0",
-    "stylelint-config-sass-guidelines": "^7.1.0"
-  }
+    "eslint": "^8.1.0",
+    "postcss": "^8.3.11",
+    "postcss-scss": "^4.0.2",
+    "stylelint": "^14.0.1",
+    "stylelint-config-concentric-order": "^4.0.1",
+    "stylelint-config-sass-guidelines": "^8.0.0"
+  },
+  "dependencies": {}
 }
