@@ -1,3 +1,8 @@
+# 1.0.3
+- a `rel="noopener"` attribute has been added to the badge anchor #22 (#24)
+- some of the badge template positions did not work #21 (#23)
+- development dependencies have been updated #19 (#20)
+
 # 1.0.2
 - badge accessibility was incomplete and has been fixed #16 (#17)
 
