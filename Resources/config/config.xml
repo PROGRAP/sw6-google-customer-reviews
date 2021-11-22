@@ -17,6 +17,7 @@
             <label>Google Maps Place ID</label>
             <label lang="de-DE">Google Maps Place ID</label>
             <helpText>Go To https://bit.ly/3o7D6ti to find your place id.</helpText>
+            <helpText lang="de-DE">Besuchen Sie https://bit.ly/3o7D6ti um Ihre Place ID zu erhalten.</helpText>
         </input-field>
 
         <input-field type="single-select">
