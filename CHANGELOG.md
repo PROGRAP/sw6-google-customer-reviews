@@ -1,3 +1,6 @@
+# 1.0.4
+- added missing german translation for the place ID help text #11 (#12)
+
 # 1.0.3
 - a `rel="noopener"` attribute has been added to the badge anchor #22 (#24)
 - some of the badge template positions did not work #21 (#23)
