@@ -13,7 +13,7 @@ The app can be downloaded via the following channels:
 
  - Download from Github
  - Clone via git
- - Download for free from the Shopware Store
+ - Download for free from the [Shopware Store](https://store.shopware.com/zmb4194085115022f/google-my-business-review-badge.html)
  - Install via Composer
 
 After downloading the app, it has to be placed inside the `custom/apps/ZmbGoogleCustomerReviews`
