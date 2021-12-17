@@ -56,8 +56,29 @@
                     <name>Add Manually</name>
                     <name lang="de-DE">Manuell Einfügen</name>
                 </option>
+                <option>
+                    <id>top_left</id>
+                    <name>top left floating</name>
+                    <name lang="de-DE">oben links schwebend</name>
+                </option>
+                <option>
+                    <id>top_right</id>
+                    <name>top right floating</name>
+                    <name lang="de-DE">oben rechts schwebend</name>
+                </option>
+                <option>
+                    <id>bottom_left</id>
+                    <name>bottom left floating</name>
+                    <name lang="de-DE">unten links schwebend</name>
+                </option>
+                <option>
+                    <id>bottom_right</id>
+                    <name>bottom right floating</name>
+                    <name lang="de-DE">unten rechts schwebend</name>
+                </option>
             </options>
         </input-field>
+
         <input-field type="single-select">
             <name>theme</name>
             <label>Badge Theme</label>
@@ -81,6 +102,25 @@
                 </option>
             </options>
         </input-field>
+
+        <input-field type="int">
+            <name>floatingOffsetX</name>
+            <label>Offset X axis</label>
+            <label lang="de-DE">Abstand X Achse</label>
+            <helpText>Offset on the X axis from the nearest edge. Only affects floating badges!</helpText>
+            <helpText lang="de-DE">Abstand auf der X Achse vom nähesten Rand. Nur auf Floating-Badges anwendbar!</helpText>
+            <defaultValue>0</defaultValue>
+        </input-field>
+
+        <input-field type="int">
+            <name>floatingOffsetY</name>
+            <label>Offset Y axis</label>
+            <label lang="de-DE">Abstand Y Achse</label>
+            <helpText>Offset on the Y axis from the nearest edge. Only affects floating badges!</helpText>
+            <helpText lang="de-DE">Abstand auf der Y Achse vom nähesten Rand. Nur auf Floating-Badges anwendbar!</helpText>
+            <defaultValue>0</defaultValue>
+        </input-field>
+
         <input-field type="bool">
             <name>loadLib</name>
             <label>Load Google Maps Library</label>

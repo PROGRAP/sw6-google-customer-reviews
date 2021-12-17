@@ -1,7 +1,27 @@
 {% block pro_customer_reviews_badge %}{% apply spaceless %}
     {% set theme = theme ?: config('ZmbGoogleCustomerReviews.config.theme') %}
+    {% set position = config('ZmbGoogleCustomerReviews.config.position') %}
+    {% set offsetY = config('ZmbGoogleCustomerReviews.config.floatingOffsetY') %}
+    {% set offsetX = config('ZmbGoogleCustomerReviews.config.floatingOffsetX') %}
 
-    <a data-pro-customer-reviews target="_blank" rel="noopener" data-key="{{ config('ZmbGoogleCustomerReviews.config.apiKey') }}" data-id="{{ config('ZmbGoogleCustomerReviews.config.placeId') }}" data-load-lib="{{ config('ZmbGoogleCustomerReviews.config.loadLib') }}" class="theme-{{theme}}{% if class %} {{ class }}{% endif %}">
+    {% macro offset(context) %}
+        {% if context.position == "top_left" %}
+            {% set axisY = "top" %}
+            {% set axisX = "left" %}
+        {% elseif context.position == "top_right" %}
+            {% set axisY = "top" %}
+            {% set axisX = "right" %}
+        {% elseif context.position == "bottom_left" %}
+            {% set axisY = "bottom" %}
+            {% set axisX = "left" %}
+        {% elseif context.position == "bottom_right" %}
+            {% set axisY = "bottom" %}
+            {% set axisX = "right" %}
+        {% endif %}
+        {{axisY}}:{{context.offsetY}}px;{{axisX}}:{{context.offsetX}}px;
+    {% endmacro %}
+
+  <a data-pro-customer-reviews target="_blank" rel="noopener" data-key="{{ config('ZmbGoogleCustomerReviews.config.apiKey') }}" data-id="{{ config('ZmbGoogleCustomerReviews.config.placeId') }}" data-load-lib="{{ config('ZmbGoogleCustomerReviews.config.loadLib') }}" class="theme-{{theme}}{% if class %} {{ class }}{% endif %}" style="{% if floating %}{{ _self.offset(_context) }}{% endif %}">
         {% block pro_customer_reviews_badge_content %}
             {% block pro_customer_reviews_badge_rating %}
                 <div class="rating" role="meter" aria-label="{{ 'pro.customerReviews.meter-label' | trans }}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">

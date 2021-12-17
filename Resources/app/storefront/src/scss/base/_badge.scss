@@ -133,3 +133,7 @@ $pro-customer-reviews-badge-dark-color: rgba(255, 255, 255, .6);
     color: $color;
     font-size: 20px;
 }
+
+@mixin pro-customer-reviews-badge-floating() {
+    position: fixed;
+}

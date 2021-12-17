@@ -32,6 +32,10 @@
         @include pro-customer-reviews-badge-label();
     }
 
+    &.floating {
+        @include pro-customer-reviews-badge-floating();
+    }
+
     &.theme-dark {
         @include pro-customer-reviews-badge-dark();
     }
