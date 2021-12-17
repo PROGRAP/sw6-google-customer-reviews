@@ -6,7 +6,7 @@
     {{parent()}}
 
     {% if position == 'top_left' or position == 'top_right' or position == 'bottom_right' or position == 'bottom_left' %}
-        {% sw_include '@Storefront/pro-customer-reviews/components/badge.html.twig' with { class: "floating" } %}
+        {% sw_include '@ZmbGoogleCustomerReviews/storefront/pro-customer-reviews/components/badge.html.twig' with { class: "floating", floating: true} %}
     {% endif %}
 
 {% endblock %}
