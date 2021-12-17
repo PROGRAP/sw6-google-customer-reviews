@@ -57,23 +57,23 @@
                 </option>
                 <option>
                     <id>top_left</id>
-                    <name>top left</name>
-                    <name lang="de-DE">oben links</name>
+                    <name>top left floating</name>
+                    <name lang="de-DE">oben links schwebend</name>
                 </option>
                 <option>
                     <id>top_right</id>
-                    <name>top right</name>
-                    <name lang="de-DE">oben rechts</name>
+                    <name>top right floating</name>
+                    <name lang="de-DE">oben rechts schwebend</name>
                 </option>
                 <option>
                     <id>bottom_left</id>
-                    <name>bottom left</name>
-                    <name lang="de-DE">unten links</name>
+                    <name>bottom left floating</name>
+                    <name lang="de-DE">unten links schwebend</name>
                 </option>
                 <option>
                     <id>bottom_right</id>
-                    <name>bottom right</name>
-                    <name lang="de-DE">unten rechts</name>
+                    <name>bottom right floating</name>
+                    <name lang="de-DE">unten rechts schwebend</name>
                 </option>
             </options>
         </input-field>
